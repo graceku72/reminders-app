@@ -19,6 +19,10 @@ class ReminderListViewModel: ObservableObject {
         self.reminders.append(newReminder)
     }
     
+    func deleteReminder(at offsets: IndexSet) {
+        self.reminders.remove(atOffsets: offsets)
+    }
+    
 //    func updateReminders() -> [Reminder] {
 //        self.reminders = self.reminders.filter { !$0.isDone }
 //        return self.reminders

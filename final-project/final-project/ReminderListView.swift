@@ -25,6 +25,9 @@ struct ReminderListView: View {
                 ForEach(vm.reminders) { reminder in
                     ReminderView(vm: ReminderViewModel(model: reminder))
                 }
+                .onDelete { indexSet in
+                    vm.deleteReminder(at: indexSet)
+                }
                 
                 if isAddingReminder {
                     TextField("", text: $input, onCommit: {
