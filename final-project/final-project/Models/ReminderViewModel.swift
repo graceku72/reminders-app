@@ -29,4 +29,8 @@ class ReminderViewModel: ObservableObject, Identifiable {
     func toggleIsDone() {
         model.isDone = !model.isDone
     }
+    
+    func updateName(_ newName: String) {
+        model.name = newName
+    }
 }
